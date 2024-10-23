@@ -16,7 +16,7 @@ increasing brightness of signs, but more will come soon.
 
 ## Changelog
 
-- Version: 0.0.1
+- Version: 1.0.0
   - Implemented basic functionality for signs
   - Replaced vanilla values (0,1,5,10) with higher values (0,2,10,50)
 
