@@ -1,10 +1,9 @@
 #include "MoreLightingOptionsModule.h"
 #include "Buildables/FGBuildableWidgetSign.h"
 #include "Patching/NativeHookManager.h"
-
+#include "MoreLightingOptions_ConfigStruct.h"
 
 // For Signs
-
 class HFGBuildableWidgetSign
 {
 public:
@@ -13,23 +12,27 @@ public:
         if (!self) {
             return;
         }
+
+        FMoreLightingOptions_ConfigStruct config = FMoreLightingOptions_ConfigStruct::GetActiveConfig(const_cast<AFGBuildableWidgetSign*>(self));
+
         float NewEmissiveValue = 0.0f;
+
         switch (Level)
         {
         case 0:
-            NewEmissiveValue = 0.0f;
+            NewEmissiveValue = config.SignBrightness0;
             break;
         case 1:
             // Originally 1.0
-            NewEmissiveValue = 2.0f;
+            NewEmissiveValue = config.SignBrightness1;
             break;
         case 2:
             // Originally 5.0
-            NewEmissiveValue = 10.0f;
+            NewEmissiveValue = config.SignBrightness2;
             break;
         case 3:
             // Originally 10.0
-            NewEmissiveValue = 50.0f;
+            NewEmissiveValue = config.SignBrightness3;
             break;
         }
         scope.Override(NewEmissiveValue);

@@ -1,4 +1,6 @@
 using UnrealBuildTool;
+using System.IO;
+using System;
 
 public class MoreLightingOptions : ModuleRules
 {
@@ -16,7 +18,13 @@ public class MoreLightingOptions : ModuleRules
             "DeveloperSettings", "PhysicsCore", "InputCore",
             "AssetRegistry", "RenderCore", "RHI",
             "SlateCore", "Slate", "UMG", "GameplayTags",
-            "DummyHeaders", "FactoryGame", "SML",
+            "DummyHeaders", "FactoryGame", "SML", "Json"
         });
+
+        PublicDependencyModuleNames.AddRange(new string[] { "FactoryGame" });
+
+        if (Target.Type == TargetRules.TargetType.Editor) {
+            PublicDependencyModuleNames.AddRange(new string[] {"OnlineBlueprintSupport", "AnimGraph"});
+        }
     }
 }
