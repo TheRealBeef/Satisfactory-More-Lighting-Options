@@ -7,7 +7,7 @@
 ## Description
 
 Beef's More Lighting Options mod gives you additional control over lighting in the game. Currently its limited to
-increasing brightness of signs, but more will come soon.
+increasing or decreasing brightness of signs, but more functionality will come soon.
 <p align="center" width="100%">
 <img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
 </p>
