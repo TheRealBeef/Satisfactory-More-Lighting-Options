@@ -1,7 +1,8 @@
 {
 	"FileVersion": 3,
-	"Version": 0,
+	"Version": 1,
 	"VersionName": "0.0.1",
+	"SemVersion": "0.0.1",
 	"FriendlyName": "MoreLightingOptions",
 	"Description": "More Lighting Options",
 	"Category": "Modding",
@@ -14,6 +15,13 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"Modules": [
+		{
+			"Name": "MoreLightingOptions",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "SML",
@@ -21,6 +29,5 @@
 			"SemVersion": "^3.8.0"
 		}
 	],
-	"SemVersion": "0.0.1",
 	"GameVersion": ">=365306"
 }
