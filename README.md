@@ -4,7 +4,7 @@
 <img alt="Icon" src="./MoreLightingOptions.png" width="15%" />
 </p>
 
-## Description:
+## Description
 
 Beef's More Lighting Options mod gives you additional control over lighting in the game. Currently its limited to
 increasing brightness of signs, but more will come soon.
@@ -12,7 +12,7 @@ increasing brightness of signs, but more will come soon.
 <img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
 </p>
 
-## Known Bugs:
+## Known Bugs
 
 - Untested and unlikely to work in multiplayer and dedicated for now.
 
