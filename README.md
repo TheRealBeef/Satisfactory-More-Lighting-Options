@@ -13,10 +13,12 @@ increasing brightness of signs, but more will come soon.
 </p>
 
 ## Known Bugs
-
 - Untested and unlikely to work in multiplayer and dedicated for now.
 
 ## Changelog
+
+- Version 1.0.1
+  - Added configuration support - requires reloading the save
 
 - Version: 1.0.0
   - Implemented basic functionality for signs
@@ -26,7 +28,7 @@ increasing brightness of signs, but more will come soon.
 
 (In most likely order of tackling them)
 
-- [ ] Configuration of sign brightness levels, so you can set you own values for each of the 3 levels
+- [ ] Configuration of sign brightness levels can happen in-game
 - [ ] Dimmer lights - Allow setting lights lower than 10%, as sometimes this is still too bright
 - [ ] Configure "light cones" emitting from regular lights, allowing them to be reduced or eliminated
 - [ ] Sun / Moon Brightness Control - to make your day and nights brighter or darker
@@ -35,4 +37,4 @@ increasing brightness of signs, but more will come soon.
 
 ## Credits
 
-Mod created by TheRealBeef, and much help to Rex and Mircea so far guiding me through the first steps here.
+Mod created by TheRealBeef, and much thanks to Rex and Mircea so far guiding me through the first steps here.
