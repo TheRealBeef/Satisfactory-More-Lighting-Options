@@ -8,6 +8,9 @@
 
 Beef's More Lighting Options mod gives you additional control over lighting in the game. Currently its limited to
 increasing or decreasing brightness of signs, but more functionality will come soon.
+
+Adjust your desired emissiveness level for each emissiveness option for signs (Off, Level 1, 2, 3) in the mod options on the main menu. The default values are roughly double vanilla.
+
 <p align="center" width="100%">
 <img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
 </p>
