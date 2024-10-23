@@ -31,7 +31,7 @@ increasing brightness of signs, but more will come soon.
 - [ ] Configure "light cones" emitting from regular lights, allowing them to be reduced or eliminated
 - [ ] Sun / Moon Brightness Control - to make your day and nights brighter or darker
 - [ ] Place a slider in sign menu to give more fine-control over sign emissiveness
-- [ ] Test and resolve any multiplayer / dedicated server issues
+- [ ] Test and resolve any multiplayer / dedicated server issues, including synchroniziation of settings
 
 ## Credits
 
