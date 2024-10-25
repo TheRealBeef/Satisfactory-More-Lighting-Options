@@ -11,14 +11,19 @@ increasing or decreasing brightness of signs, but more functionality will come s
 
 Adjust your desired emissiveness level for each emissiveness option for signs (Off, Level 1, 2, 3) in the mod options on the main menu. The default values are roughly double vanilla.
 
+There's a setting to increase the speed at which Mod Configuration options are applied to signs in-game since it now updates in realtime, at the cost of more flickering and if you have a lot of signs potential for lag.
+
 <p align="center" width="100%">
 <img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
 </p>
 
 ## Known Bugs
 - Untested and unlikely to work in multiplayer and dedicated for now.
+- Updating signs, especially with Fast Update enabled, causes flickering. This is an artifact of the update process and there's not much I can do about it
 
 ## Changelog
+- Version 1.0.2
+  - Added support for changing values in-game. There's a setting for "fast update" that can be set, but can result in flickering as it refreshes which is a vanilla behavior sped up.
 
 - Version 1.0.1
   - Added configuration support - requires reloading the save
@@ -31,7 +36,7 @@ Adjust your desired emissiveness level for each emissiveness option for signs (O
 
 (In most likely order of tackling them)
 
-- [ ] Configuration of sign brightness levels can happen in-game
+- [X] Configuration of sign brightness levels can happen in-game
 - [ ] Dimmer lights - Allow setting lights lower than 10%, as sometimes this is still too bright
 - [ ] Configure "light cones" emitting from regular lights, allowing them to be reduced or eliminated
 - [ ] Sun / Moon Brightness Control - to make your day and nights brighter or darker
