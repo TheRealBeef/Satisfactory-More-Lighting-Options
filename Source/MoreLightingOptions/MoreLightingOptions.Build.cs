@@ -21,10 +21,13 @@ public class MoreLightingOptions : ModuleRules
             "DummyHeaders", "FactoryGame", "SML", "Json"
         });
 
-        PublicDependencyModuleNames.AddRange(new string[] { "FactoryGame" });
-
         if (Target.Type == TargetRules.TargetType.Editor) {
-            PublicDependencyModuleNames.AddRange(new string[] {"OnlineBlueprintSupport", "AnimGraph"});
+            PublicDependencyModuleNames.AddRange(new string[] {
+                "OnlineBlueprintSupport",
+                "AnimGraph",
+                "Kismet",      // Kismet is editor-only
+                "EditorStyle"  // EditorStyle is editor-only
+            });
         }
     }
 }

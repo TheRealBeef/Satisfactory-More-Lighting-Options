@@ -21,6 +21,9 @@ public:
     UPROPERTY(BlueprintReadWrite)
     float SignBrightness3{};
 
+    UPROPERTY(BlueprintReadWrite)
+    bool FastSignUpdate{};
+
     /* Retrieves active configuration value and returns object of this struct containing it */
     static FMoreLightingOptions_ConfigStruct GetActiveConfig(UObject* WorldContext) {
         FMoreLightingOptions_ConfigStruct ConfigStruct{};
