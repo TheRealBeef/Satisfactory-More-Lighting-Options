@@ -6,10 +6,9 @@
 
 ## Description
 
-Beef's More Lighting Options mod gives you additional control over lighting in the game. Currently its limited to
-increasing or decreasing brightness of signs, but more functionality will come soon.
+Beef's More Lighting Options mod gives you additional control over lighting in the game. Currently its limited to increasing or decreasing brightness of signs, but more functionality will come soon.
 
-Adjust your desired emissiveness level for each emissiveness option for signs (Off, Level 1, 2, 3) in the mod options on the main menu. The default values are roughly double vanilla.
+Adjust your desired emissiveness level for each emissiveness option for signs (Off, Level 1, 2, 3) in the mod options either on the main menu or in-game. The default values are roughly double vanilla.
 
 There's a setting to increase the speed at which Mod Configuration options are applied to signs in-game since it now updates in realtime, at the cost of more flickering and if you have a lot of signs potential for lag.
 
@@ -23,7 +22,7 @@ There's a setting to increase the speed at which Mod Configuration options are a
 
 ## Changelog
 - Version 1.0.2
-  - Added support for changing values in-game. There's a setting for "fast update" that can be set, but can result in flickering as it refreshes which is a vanilla behavior sped up.
+  - You can now see your mod config changes realtime in-game. There's a setting for "fast update" that can be set that speeds it up even more, but can result in flickering as it refreshes which is a vanilla behavior sped up.
 
 - Version 1.0.1
   - Added configuration support - requires reloading the save
