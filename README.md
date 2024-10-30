@@ -17,7 +17,11 @@ Adjust your desired emissiveness level for each emissiveness option for signs (O
 There's a setting to increase the speed at which Mod Configuration options are applied to signs in-game since it now updates in realtime, at the cost of more flickering and if you have a lot of signs, potential for lag.
 
 <p align="center" width="100%">
+  Sign Emissiveness<br>
   <img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
+  <br><br>
+Sun and Moon Brightness
+<br>
   <img alt="Preview Image 2" src="./Preview2.jpg" width="50%" />
 </p>
 
