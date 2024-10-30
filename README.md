@@ -30,6 +30,9 @@ Sun and Moon Brightness
 - Updating signs, especially with Fast Update enabled, causes flickering. This is an artifact of the update process and there's not much I can do about it
 
 ## Changelog
+- Version 1.1.1
+  - Fixed minor issue where Sun max brightness setting was capped at 2.0 instead of 5.0
+
 - Version 1.1.0
   - Control over sun and moon brightness/intensity values. You can make your sun and moon darker (or brighter) according to your wishes.
   - Changed the default config values for all settings (including signs) to vanilla values, to allow picking and choosing what you want to alter.
