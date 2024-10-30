@@ -6,14 +6,19 @@
 
 ## Description
 
-Beef's More Lighting Options mod gives you additional control over lighting in the game. Currently its limited to increasing or decreasing brightness of signs, but more functionality will come soon.
+Beef's More Lighting Options mod gives you additional control over lighting in the game.
 
-Adjust your desired emissiveness level for each emissiveness option for signs (Off, Level 1, 2, 3) in the mod options either on the main menu or in-game. The default values are roughly double vanilla.
+### Sun and Moon Brightness
+Nights too bright? Days not dreary enough for you? You can increase or decrease the brightness/intensity of both the Sun and the Moon now, with independent settings.
 
-There's a setting to increase the speed at which Mod Configuration options are applied to signs in-game since it now updates in realtime, at the cost of more flickering and if you have a lot of signs potential for lag.
+### Sign Emissiveness
+Adjust your desired emissiveness level for each emissiveness option for signs (Off, Level 1, 2, 3) in the mod options either on the main menu or in-game. The default values are vanilla, so if you don't notice any changes make sure you've changed the settings!
+
+There's a setting to increase the speed at which Mod Configuration options are applied to signs in-game since it now updates in realtime, at the cost of more flickering and if you have a lot of signs, potential for lag.
 
 <p align="center" width="100%">
-<img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
+  <img alt="Preview Image 1" src="./Preview1.jpg" width="50%" />
+  <img alt="Preview Image 2" src="./Preview2.jpg" width="50%" />
 </p>
 
 ## Known Bugs
@@ -21,6 +26,10 @@ There's a setting to increase the speed at which Mod Configuration options are a
 - Updating signs, especially with Fast Update enabled, causes flickering. This is an artifact of the update process and there's not much I can do about it
 
 ## Changelog
+- Version 1.1.0
+  - Control over sun and moon brightness/intensity values. You can make your sun and moon darker (or brighter) according to your wishes.
+  - Changed the default config values for all settings (including signs) to vanilla values, to allow picking and choosing what you want to alter.
+
 - Version 1.0.2
   - You can now see your mod config changes realtime in-game. There's a setting for "fast update" that can be set that speeds it up even more, but can result in flickering as it refreshes which is a vanilla behavior sped up.
 
@@ -38,7 +47,7 @@ There's a setting to increase the speed at which Mod Configuration options are a
 - [X] Configuration of sign brightness levels can happen in-game
 - [ ] Dimmer lights - Allow setting lights lower than 10%, as sometimes this is still too bright
 - [ ] Configure "light cones" emitting from regular lights, allowing them to be reduced or eliminated
-- [ ] Sun / Moon Brightness Control - to make your day and nights brighter or darker
+- [X] Sun / Moon Brightness Control - to make your day and nights brighter or darker
 - [ ] Place a slider in sign menu to give more fine-control over sign emissiveness
 - [ ] Test and resolve any multiplayer / dedicated server issues, including synchroniziation of settings
 
