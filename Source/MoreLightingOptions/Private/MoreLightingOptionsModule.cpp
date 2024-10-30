@@ -3,6 +3,8 @@
 #include "Patching/NativeHookManager.h"
 #include "MoreLightingOptions_ConfigStruct.h"
 #include "MoreLightingOptionsFunctionLibrary.h"
+#include "Components/LightComponent.h"
+#include "FGSkySphere.h"
 
 ////////////////////////
 // For Later Reference
@@ -16,7 +18,7 @@ public:
     static void Hook_GetAdjustedEmissiveValue(TCallScope<float(__cdecl*)(const AFGBuildableWidgetSign*, int32)>& scope, const AFGBuildableWidgetSign* self, int32 Level)
     {
         if (!self) {
-            UE_LOG(LogTemp, Warning, TEXT("MLO: 'self' is null, skipping"));
+            UE_LOG(LogTemp, Warning, TEXT("MLO: 'self' is null, Sign Hook, skipping"));
             return;
         }
 
@@ -54,8 +56,48 @@ public:
 
     static void RegisterHooks()
     {
-        UE_LOG(LogTemp, Warning, TEXT("MLO: Registering hooks for AFGBuildableWidgetSign"));
+        UE_LOG(LogTemp, Warning, TEXT("MLO: Registering hooks for Signs"));
         SUBSCRIBE_UOBJECT_METHOD(AFGBuildableWidgetSign, GetAdjustedEmissiveValue, &HFGBuildableWidgetSign::Hook_GetAdjustedEmissiveValue);
+    }
+};
+
+class HCelestialBrightness
+{
+public:
+    static void Hook_UpdateCurvesFromTime(TCallScope<void(__cdecl*)(AFGSkySphere*)>& scope, AFGSkySphere* self)
+    {
+        scope(self);
+
+        if (!self) {
+            UE_LOG(LogTemp, Warning, TEXT("MLO: 'self' is null, Celestial Hook, skipping"));
+            return;
+        }
+
+        FMoreLightingOptions_ConfigStruct config = FMoreLightingOptions_ConfigStruct::GetActiveConfig(self);
+
+        // Sun Intensity
+        if (self->mSunLight && self->mSunLight->GetLightComponent())
+        {
+            float CurrentSunIntensity = self->mSunLight->GetLightComponent()->Intensity;
+            float NewSunIntensity = CurrentSunIntensity * config.SunBrightnessValue;
+            self->mSunLight->GetLightComponent()->SetIntensity(NewSunIntensity);
+            // UE_LOG(LogTemp, Log, TEXT("MLO: Adjusted Sun brightness to %f"), NewSunIntensity);
+        }
+
+        // Moon Intensity
+        if (self->mMoonLight && self->mMoonLight->GetLightComponent())
+        {
+            float CurrentMoonIntensity = self->mMoonLight->GetLightComponent()->Intensity;
+            float NewMoonIntensity = CurrentMoonIntensity * config.MoonBrightnessValue;
+            self->mMoonLight->GetLightComponent()->SetIntensity(NewMoonIntensity);
+            // UE_LOG(LogTemp, Log, TEXT("MLO: Adjusted Moon brightness to %f"), NewMoonIntensity);
+        }
+    }
+
+    static void RegisterHooks()
+    {
+        UE_LOG(LogTemp, Warning, TEXT("MLO: Registering hooks for Sun and Moon brightness"));
+        SUBSCRIBE_METHOD(AFGSkySphere::UpdateCurvesFromTime, &HCelestialBrightness::Hook_UpdateCurvesFromTime);
     }
 };
 
@@ -65,6 +107,7 @@ void FMoreLightingOptionsModule::StartupModule()
     {
         UE_LOG(LogTemp, Warning, TEXT("MLO: FMoreLightingOptionsModule Registering hooks"));
         HFGBuildableWidgetSign::RegisterHooks();
+        HCelestialBrightness::RegisterHooks();
     }
 }
 
