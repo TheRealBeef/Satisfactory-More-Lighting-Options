@@ -30,6 +30,10 @@ Sun and Moon Brightness
 - Updating signs, especially with Fast Update enabled, causes flickering. This is an artifact of the update process and there's not much I can do about it
 
 ## Changelog
+
+- Version 1.1.2
+  - Rebuild against SML 3.10
+
 - Version 1.1.1
   - Fixed minor issue where Sun max brightness setting was capped at 2.0 instead of 5.0
 
